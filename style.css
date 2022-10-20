@@ -1,0 +1,84 @@
+
+body {
+  background: linear-gradient(to right, #00aaff, #00ff6c);
+  margin: 0;
+  padding: 0;
+}
+
+*::after,
+*::before {
+  box-sizing: border-box;
+  font-family: "Kanit", sans-serif;
+  font-weight: normal;
+}
+button {
+  font-family: "Kanit", sans-serif;
+}
+.img-container{
+  position: absolute;
+  left: 10px;
+  top: 25px;
+
+}
+img{
+  max-width: 60%;
+  height: auto;
+  object-fit: fill;
+  display: none;
+
+}
+img:hover{
+  cursor: pointer;
+}
+.caculator-grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+.caculator-grid > button {
+  cursor: pointer;
+
+  font-size: 2rem;
+  border: 1px solid white;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.caculator-grid > button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.span-two {
+  grid-column: span 2;
+}
+
+.output {
+  position: relative;
+  grid-column: 1 / -1;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.output .previous-output {
+  font-family: "Kanit", sans-serif;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.5rem;
+}
+.output .current-output {
+  font-family: "Kanit", sans-serif;
+  color: white;
+  font-size: 2.5rem;
+}
+.poppup{
+  background-color: antiquewhite;
+  z-index: 999;
+  margin-left: 50%;
+  height: 50%;
+}
